@@ -36,3 +36,4 @@ Finally, run the program:
 
 ## Java Language Version
 
+The easiest way is to import the project using Eclipse IDE.
