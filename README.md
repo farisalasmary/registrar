@@ -2,7 +2,7 @@
 
 The program basically posts Course Reference Numbers (CRNs) faster inside the CRN text boxs to help student getting courses' sections that he wants before it is filled and closed.
 
-This program helped me a lot through out all years I studied at King Fahd University of Petroleum and Minerals (KFUPM). I developed the C language version back in 2014. After two years, I developed the Java language version with a graphical user interface (GUI). I used [JNativeHook](https://github.com/kwhat/jnativehook) to capture keystrokes from the user and generate keystrokes according to the CRNs that the program is provided with.
+This program helped me a lot through out all years I studied at King Fahd University of Petroleum and Minerals (KFUPM). I developed the C language version back in 2014. Two years later, I developed the Java language version with a graphical user interface (GUI). I used [JNativeHook](https://github.com/kwhat/jnativehook) to capture keystrokes from the user and generate keystrokes according to the CRNs that the program is provided with.
 
 ## C Language Version
 
