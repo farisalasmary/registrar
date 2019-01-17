@@ -36,4 +36,15 @@ Finally, run the program:
 
 ## Java Language Version
 
-The easiest way is to import the project using Eclipse IDE.
+The easiest way to work with the project is to import using Eclipse IDE.
+
+You can run the program simply by double clicking on the file `Registrar.jar` and it will run.
+
+Also, you can run it through the command line using the following command:
+
+```Java
+java -jar Registrar.jar
+```
+
+**Note:** You should have Java Virtual Machine on your computer.
+

@@ -26,12 +26,12 @@ public class MainGUI extends JFrame implements ActionListener, WindowListener{
 
 	private static final long serialVersionUID = -5778856184731491899L;
 
-	public static final double VERSION = 1.0;
+	public static final double VERSION = 1.1;
 	
 	private JLabel CRNsLbls[];
 	private JMenuBar menuBar;
-	private JMenu menuFile;
-	private JMenuItem miOpen, miSaveAs, miExit, miAbout;
+	private JMenu menuFile, menuAbout;
+	private JMenuItem miOpen, miSaveAs, miExit, miAbout, miHowToUse;
 	private JTextField CRNsTxts[];
 	private JPanel CRNsPanel, controlPanel;
 	private JButton startBtn, stopBtn;
@@ -49,23 +49,29 @@ public class MainGUI extends JFrame implements ActionListener, WindowListener{
 		this.menuBar = new JMenuBar();
 		
 		this.menuFile = new JMenu("File");
+		this.menuAbout = new JMenu("About");
 		
+		this.miHowToUse = new JMenuItem("How To Use");
 		this.miAbout = new JMenuItem("About...");
 		this.miOpen = new JMenuItem("Open...");
 		this.miSaveAs = new JMenuItem("Save As...");
 		this.miExit = new JMenuItem("Exit");
 		
 		this.miAbout.addActionListener(this);
+		this.miHowToUse.addActionListener(this);
 		this.miOpen.addActionListener(this);
 		this.miSaveAs.addActionListener(this);
 		this.miExit.addActionListener(this);
+		
+		this.menuAbout.add(this.miHowToUse);
+		this.menuAbout.add(this.miAbout);
 		
 		this.menuFile.add(this.miOpen);
 		this.menuFile.add(this.miSaveAs);
 		this.menuFile.addSeparator();
 		this.menuFile.add(this.miExit);
 		this.menuBar.add(this.menuFile);
-		this.menuBar.add(this.miAbout);
+		this.menuBar.add(this.menuAbout);
 		
 		this.CRNsPanel = new JPanel(new GridLayout(4, 4));
 //		this.CRNsPanel.setPreferredSize(new Dimension(150, 200));
@@ -199,6 +205,14 @@ public class MainGUI extends JFrame implements ActionListener, WindowListener{
 				stop();
 		}else if(e.getSource() == this.miOpen){
 			loadFromFile();
+		}else if(e.getSource() == this.miHowToUse){
+			String msg = "1- Fill the text boxes with your CRNs\n"
+					   + "2- Click on 'Start' button\n"
+					   + "3- Press the 'Space' key to paste your CRNs\n\n"
+					   + "Note: the program will stop reading CRNs from CRN text boxes\n"
+					   + "at the first empty CRN text box.\n";
+			JOptionPane.showMessageDialog(null, msg, "About...", JOptionPane.INFORMATION_MESSAGE);
+			
 		}else if(e.getSource() == this.miAbout){
 			String msg = "Registrar " + VERSION + "\n\n"
 					   + "Developed by:\n"
@@ -206,6 +220,7 @@ public class MainGUI extends JFrame implements ActionListener, WindowListener{
 					   + "Email:\n"
 					   + "farisalasmary@gmail.com\n";
 			JOptionPane.showMessageDialog(null, msg, "About...", JOptionPane.INFORMATION_MESSAGE);
+		
 		}else if(e.getSource() == this.miSaveAs){
 			saveAs();
 		}else if(e.getSource() == this.miExit){
