@@ -48,3 +48,7 @@ java -jar Registrar.jar
 
 **Note:** You should have Java Virtual Machine on your computer.
 
+
+# Demo (Java)
+
+![](demo.gif)
