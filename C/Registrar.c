@@ -26,6 +26,7 @@ gcc Registrar.c -o reg -lm -lX11 -lXtst -lXext
 for UBUNTU before compiling:
  
 sudo apt-get install libxtst-dev
+sudo apt-get install libxt-dev
 
 ========================================
 CRNs for test : 
